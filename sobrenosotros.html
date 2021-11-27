@@ -13,7 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<SCRIPT SRC="funciones.js"></SCRIPT> 
 
 </head>
 <body>
@@ -27,9 +27,10 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li class="active"><a href="sobrenosotros.html">Sobre nosotros</a></li>
           <li><a href="contacto.html">Contactenos</a></li>
+          <li><a href="logueo.php">Ingresar</a></li>
         </ul>
       </div>
       <div class="clr"></div>
@@ -41,8 +42,12 @@
       <div class="hbg"><img src="images\renovables.jpg" width="970" height="147" alt="" /></div>
       <div class="mainbar">
         <div class="article">
-
-
+          <div class="aboutus-content" style="text-align:center">
+            <h1>Nuestra <span>Ubicación</span></h1>
+          </div>
+          <div id="googleMap" style="width:100%;height:400px;"></div>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoS3Ew-T5BKWQIg4Q8KmVkTOXj2MK19RQ&callback=initMap"> </script>
+        <br>
         <div>
           <div class="aboutus-content" style="text-align:center">
               <h1>Sobre <span>Nosotros</span></h1>
@@ -50,11 +55,9 @@
                 Somos una empresa colombiana, experta en el desarrollo de proyectos basadas en energias sostenibles. Nos apalancamos en la comercialización de
                 equipos y en el apoyo de empresas que quieran desarrollar proyectos para comunidades rurales. Las energias limpias impulsan el desarrollo social
                  y la generación de oportunideades para los territorios colectivos mas marginados del pais.
-
               </p>
               
-              <div class="counter ">
-                  
+              <div class="counter bg-dark">              
                   <div class="single-counter text-center">
                       <h2 class="counter">12</h2>
                       <p>Proyectos Desarrollados</p>
@@ -86,4 +89,6 @@
 
 
 </body>
+<br>
+
 </html>

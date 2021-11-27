@@ -18,23 +18,36 @@
 </head>
 <body>
   <div class="main">
-
-
   <div class="header">
+    
+
     <div class="header_resize">
       <div class="logo">
         <h1><a href="index.html"> <img src="images\SolarEnergy_transparent.png" width="250" height="70"> </img> </a></h1>
       </div>
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="index.html">Inicio</a></li>
+          <li class="active"><a href="index.php">Inicio</a></li>
           <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
           <li><a href="contacto.html">Contactenos</a></li>
+          <li><a href="logueo.php">Ingresar</a></li>
         </ul>
       </div>
       <div class="clr"></div>
     </div>
   </div>
+
+  <div style="text-align:center">
+   <b> Eres el visitante numero:  </b>
+  
+   <?php include 'contador_visitas.php';
+    if(!isset($_COOKIE['valorVisita'])) {
+    $_COOKIE['valorVisita'] = contadorvisitas(true);
+    setcookie('valorVisita', $_COOKIE['valorVisita'] ,time() + (3000 * 30), "/");
+    
+    }
+    echo $_COOKIE['valorVisita']
+    ?>
 
   <div class="content">
     <div class="content_resize">
@@ -74,7 +87,11 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
  
   </body>
+
+  <br>
+
+ 
 </html>
